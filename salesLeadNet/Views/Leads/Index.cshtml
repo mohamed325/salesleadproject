@@ -1,0 +1,82 @@
+﻿@model LeadViewModel
+
+@{
+    ViewData["Title"] = "Sales Leads";
+}
+
+
+<div class="center jumbotron">
+
+
+
+
+
+
+    <p>
+        <a asp-action="Create">Add a Player</a>
+    </p>
+
+
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                firstName
+            </th>
+
+            <th>
+                lastName
+            </th>
+            <th>
+                Phone
+            </th>
+            <th>
+                City
+            </th>
+            <th>
+                State
+            </th>
+            <th>
+                Zip
+            </th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model.Leads)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => x.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => x.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => x.Phone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => x.City)
+
+
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => x.State)
+
+
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => x.Zip)
+
+
+                </td>
+
+
+            </tr>
+        }
+    </tbody>
+</table>
