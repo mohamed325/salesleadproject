@@ -6,12 +6,15 @@
         <State name="__root__">
           <Node name="salesLeadNet" expanded="True">
             <Node name="salesLeadNet" expanded="True">
-              <Node name="Dependencies" expanded="True">
-                <Node name="PackageDependencies" expanded="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="LeadsController.cs" selected="True" />
               </Node>
               <Node name="Data" expanded="True" />
               <Node name="Models" expanded="True" />
-              <Node name="Startup.cs" selected="True" />
+              <Node name="Services" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Leads" expanded="True" />
+              </Node>
             </Node>
           </Node>
         </State>

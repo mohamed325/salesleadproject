@@ -31,5 +31,26 @@ namespace salesLeadNet.Controllers
             //pass the view to a model and render
             return View(model);
         }
+        //get create form
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        //post data
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AddLead(Lead newLead)
+        {
+            if (!ModelState.IsValid)
+            {
+                return RedirectToAction("Index");
+            }
+            var successful = await _salesLeadService.AddLeadAsync(newLead);
+            if (!successful)
+            {
+                return BadRequest("Could not add sales lead.");
+            }
+            return RedirectToAction("Index");
+        }
     }
 }

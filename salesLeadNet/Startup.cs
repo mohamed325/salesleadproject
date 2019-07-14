@@ -39,7 +39,7 @@ namespace salesLeadNet
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlite(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddSingleton<ILeadService, LeadService>();
+            services.AddScoped<ILeadService, LeadService>();
             services.AddIdentity<ApplicationUser, IdentityRole>().AddDefaultUI(UIFramework.Bootstrap4)
                 .AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);

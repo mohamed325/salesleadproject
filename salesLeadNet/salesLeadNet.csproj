@@ -19,5 +19,6 @@
     <Folder Include="Views\Leads\" />
     <Folder Include="Services\" />
     <Folder Include="Data\" />
+    <Folder Include="Data\Migrations\" />
   </ItemGroup>
 </Project>
