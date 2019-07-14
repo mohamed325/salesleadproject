@@ -1,9 +1,9 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace salesLeadNet.Migrations
+namespace salesLeadNet.Data.Migrations
 {
-    public partial class AddSalesLeads : Migration
+    public partial class Leads : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -51,13 +51,13 @@ namespace salesLeadNet.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
-                    FirstName = table.Column<string>(nullable: true),
-                    LastName = table.Column<string>(nullable: true),
-                    Phone = table.Column<string>(nullable: true),
-                    State = table.Column<string>(nullable: true),
-                    City = table.Column<string>(nullable: true),
-                    Zip = table.Column<int>(nullable: false),
-                    ContactMethod = table.Column<int>(nullable: true)
+                    Name = table.Column<string>(maxLength: 100, nullable: false),
+                    Phone = table.Column<string>(nullable: false),
+                    State = table.Column<int>(nullable: true),
+                    City = table.Column<string>(maxLength: 25, nullable: true),
+                    Zip = table.Column<string>(nullable: false),
+                    ContactMethod = table.Column<int>(nullable: true),
+                    BuyIdicator = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {

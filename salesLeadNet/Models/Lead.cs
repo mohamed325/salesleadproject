@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 namespace salesLeadNet.Models
 {
@@ -7,18 +7,132 @@ namespace salesLeadNet.Models
     {
         Email,Phone,Sms,CarrierPigeon
     }
-   
+    public enum State
+    {
+        [Description("Alabama")]
+        AL,
+        [Description("Alaska")]
+        AK,
+        [Description("Arkansas")]
+        AR,
+        [Description("Arizona")]
+        AZ,
+        [Description("California")]
+        CA,
+        [Description("Colorado")]
+        CO,
+        [Description("Connecticut")]
+        CT,
+        [Description("D.C.")]
+        DC,
+        [Description("Delaware")]
+        DE,
+        [Description("Florida")]
+        FL,
+        [Description("Georgia")]
+        GA,
+        [Description("Hawaii")]
+        HI,
+        [Description("Iowa")]
+        IA,
+        [Description("Idaho")]
+        ID,
+        [Description("Illinois")]
+        IL,
+        [Description("Indiana")]
+        IN,
+        [Description("Kansas")]
+        KS,
+        [Description("Kentucky")]
+        KY,
+        [Description("Louisiana")]
+        LA,
+        [Description("Massachusetts")]
+        MA,
+        [Description("Maryland")]
+        MD,
+        [Description("Maine")]
+        ME,
+        [Description("Michigan")]
+        MI,
+        [Description("Minnesota")]
+        MN,
+        [Description("Missouri")]
+        MO,
+        [Description("Mississippi")]
+        MS,
+        [Description("Montana")]
+        MT,
+        [Description("North Carolina")]
+        NC,
+        [Description("North Dakota")]
+        ND,
+        [Description("Nebraska")]
+        NE,
+        [Description("New Hampshire")]
+        NH,
+        [Description("New Jersey")]
+        NJ,
+        [Description("New Mexico")]
+        NM,
+        [Description("Nevada")]
+        NV,
+        [Description("New York")]
+        NY,
+        [Description("Oklahoma")]
+        OK,
+        [Description("Ohio")]
+        OH,
+        [Description("Oregon")]
+        OR,
+        [Description("Pennsylvania")]
+        PA,
+        [Description("Rhode Island")]
+        RI,
+        [Description("South Carolina")]
+        SC,
+        [Description("South Dakota")]
+        SD,
+        [Description("Tennessee")]
+        TN,
+        [Description("Texas")]
+        TX,
+        [Description("Utah")]
+        UT,
+        [Description("Virginia")]
+        VA,
+        [Description("Vermont")]
+        VT,
+        [Description("Washington")]
+        WA,
+        [Description("Wisconsin")]
+        WI,
+        [Description("West Virginia")]
+        WV,
+        [Description("Wyoming")]
+        WY,
+        Other
+    }
+
     public class Lead
     {
         public Guid Id { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        [Required(ErrorMessage = "Name is required")]
+        [StringLength(100)]
+        public string Name { get; set; }
+        [Required(ErrorMessage = "You must provide a phone number")]
         [DataType(DataType.PhoneNumber)]
+        [Phone(ErrorMessage = "Not a valid phone number")]
         public string Phone { get; set; }
-        public string State { get; set; }
+
+        public State? State { get; set; }
+        [StringLength(25)]
         public string City { get; set; }
-        public int Zip { get; set; }
+        [Required(ErrorMessage = "Zip is Required")]
+        [RegularExpression(@"^\d{5}(-\d{4})?$", ErrorMessage = "Invalid Zip")]
+        public string Zip { get; set; }
         public ContactMethod? ContactMethod { get; set;}
+        public int BuyIdicator { get; set; }
 
     }
 }

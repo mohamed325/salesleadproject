@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using salesLeadNet.Data;
 
-namespace salesLeadNet.Migrations
+namespace salesLeadNet.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     partial class ApplicationDbContextModelSnapshot : ModelSnapshot
@@ -178,19 +178,24 @@ namespace salesLeadNet.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("City");
+                    b.Property<int>("BuyIdicator");
+
+                    b.Property<string>("City")
+                        .HasMaxLength(25);
 
                     b.Property<int?>("ContactMethod");
 
-                    b.Property<string>("FirstName");
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100);
 
-                    b.Property<string>("LastName");
+                    b.Property<string>("Phone")
+                        .IsRequired();
 
-                    b.Property<string>("Phone");
+                    b.Property<int?>("State");
 
-                    b.Property<string>("State");
-
-                    b.Property<int>("Zip");
+                    b.Property<string>("Zip")
+                        .IsRequired();
 
                     b.HasKey("Id");
 

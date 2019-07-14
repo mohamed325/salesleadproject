@@ -23,12 +23,10 @@
     <thead>
         <tr>
             <th>
-                firstName
+                Name
             </th>
 
-            <th>
-                lastName
-            </th>
+
             <th>
                 Phone
             </th>
@@ -44,47 +42,51 @@
             <th>
                 Preferred contact method.
             </th>
-
+            <th>
+                Indicator
+            </th>
 
         </tr>
     </thead>
     <tbody>
         @foreach (var x in Model.Leads)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => x.FirstName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => x.LastName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => x.Phone)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => x.City)
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => x.Name)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => x.Phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => x.City)
 
 
-                </td>
+            </td>
 
-                <td>
-                    @Html.DisplayFor(modelItem => x.State)
-
-
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => x.Zip)
+            <td>
+                @Html.DisplayFor(modelItem => x.State)
 
 
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => x.ContactMethod)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => x.Zip)
 
 
-                </td>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => x.ContactMethod)
 
 
-            </tr>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => x.BuyIdicator)
+
+
+            </td>
+
+        </tr>
         }
     </tbody>
 </table>

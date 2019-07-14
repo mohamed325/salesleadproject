@@ -9,5 +9,6 @@ namespace salesLeadNet.Services
     {
         Task<Lead[]> GetSalesLeadsAsync();
         Task<bool> AddLeadAsync(Lead newLead);
+       
     }
 }
