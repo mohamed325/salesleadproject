@@ -17,27 +17,6 @@ namespace salesLeadNet.Services
         }
         Task<Lead[]> ILeadService.GetSalesLeadsAsync()
         {
-            //var fakeLead1 = new Lead
-            //{
-            //    FirstName = "abdikarim",
-            //    LastName = "Mohamed",
-            //    Phone = "6148064034",
-            //    City = "Westerville",
-            //    State = "Ohio",
-            //    Zip = 43081
-
-            //};
-            //var fakeLead2 = new Lead
-            //{
-            //    FirstName = "Amal",
-            //    LastName = "sharif",
-            //    Phone = "61477962643",
-            //    City = "Columbus",
-            //    State = "Ohio",
-            //    Zip = 43229
-
-            //};
-            //return Task.FromResult(new[] { fakeLead1, fakeLead2 });
             var leads = _context.Leads;
             return leads.ToArrayAsync();
         }

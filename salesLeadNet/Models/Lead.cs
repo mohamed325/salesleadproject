@@ -7,10 +7,7 @@ namespace salesLeadNet.Models
     {
         Email,Phone,Sms,CarrierPigeon
     }
-    public enum State
-    {
-
-    }
+   
     public class Lead
     {
         public Guid Id { get; set; }

@@ -3,7 +3,7 @@
 
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="AddLead" method="POST">
+        <form asp-action="AddLead">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="FirstName" class="control-label"></label>
@@ -34,6 +34,13 @@
                 <label asp-for="Zip" class="control-label"></label>
                 <input asp-for="Zip" class="form-control" />
                 <span asp-validation-for="Zip" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContactMethod" class="control-label"></label>
+                @*<input asp-for="ContactMethod" class="form-control" />*@
+                <span asp-validation-for="ContactMethod" class="text-danger"></span>
+                <select asp-for="ContactMethod"
+                        asp-items="Html.GetEnumSelectList<ContactMethod>()" class="form-control" ></select>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
