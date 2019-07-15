@@ -37,8 +37,9 @@
                 @*<input asp-for="ContactMethod" class="form-control" />*@
                 <span asp-validation-for="ContactMethod" class="text-danger"></span>
                 <select asp-for="ContactMethod"
-                        asp-items="Html.GetEnumSelectList<ContactMethod>()" class="form-control" ></select>
+                        asp-items="Html.GetEnumSelectList<ContactMethod>()" class="form-control"></select>
             </div>
+
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>

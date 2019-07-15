@@ -122,7 +122,7 @@ namespace salesLeadNet.Models
         public string Name { get; set; }
         [Required(ErrorMessage = "You must provide a phone number")]
         [DataType(DataType.PhoneNumber)]
-        [Phone(ErrorMessage = "Not a valid phone number")]
+        [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Not a valid phone number")]
         public string Phone { get; set; }
 
         public State? State { get; set; }
@@ -130,7 +130,9 @@ namespace salesLeadNet.Models
         public string City { get; set; }
         [Required(ErrorMessage = "Zip is Required")]
         [RegularExpression(@"^\d{5}(-\d{4})?$", ErrorMessage = "Invalid Zip")]
+        [Display(Name = "Zip Code")]
         public string Zip { get; set; }
+        [Display(Name = "Preferred contact method")]
         public ContactMethod? ContactMethod { get; set;}
         public int BuyIdicator { get; set; }
 

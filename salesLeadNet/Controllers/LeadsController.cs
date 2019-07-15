@@ -38,8 +38,9 @@ namespace salesLeadNet.Controllers
         }
 
         //post data
+         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AddLead(Lead newLead)
+        public async Task<IActionResult> AddLead([Bind("Name,Phone,City,State,Zip,ContactMethod")] Lead newLead)
         {
             if (!ModelState.IsValid)
             {

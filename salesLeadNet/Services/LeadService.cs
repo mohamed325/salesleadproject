@@ -24,15 +24,23 @@ namespace salesLeadNet.Services
         }
         public async Task<bool> AddLeadAsync(Lead newLead)
         {
+           Lead salesLead = AddBuyingIndicator(newLead);
+           salesLead.Id = Guid.NewGuid();
+            _context.Leads.Add(salesLead);
+            var saveResult = await _context.SaveChangesAsync();
+            return saveResult == 1;
+        }
+       private Lead AddBuyingIndicator(Lead newLead)
+        {
             int highlyLikely = 5;
             int byPhone = 4;
             int byEmailOrSms = 3;
             int byCarrierPigeon = 2;
             int livesOhio = 1;
             int ineligible = 0;
-            newLead.Id = Guid.NewGuid();
 
-            if (newLead.Zip.StartsWith('7')) {
+            if (newLead.Zip.StartsWith('7'))
+            {
                 newLead.BuyIdicator += highlyLikely;
             }
             if (newLead.Name.ToLower().Contains('z'))
@@ -59,14 +67,11 @@ namespace salesLeadNet.Services
             {
                 newLead.BuyIdicator += livesOhio;
             }
-            if (newLead.State == State.Other)
+            if (newLead.State == State.Other || newLead.State == State.AL || newLead.State == State.HI)
             {
                 newLead.BuyIdicator = ineligible;
             }
-            _context.Leads.Add(newLead);
-            var saveResult = await _context.SaveChangesAsync();
-            return saveResult == 1;
+            return newLead;
         }
-       
     }
 }

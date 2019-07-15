@@ -4,21 +4,6 @@
     ViewData["Title"] = "Sales Leads";
 }
 
-
-<div class="center jumbotron">
-
-
-
-
-
-
-    <p>
-        <a asp-action="Create" class="btn btn-primary">Add new sales lead</a>
-    </p>
-
-
-</div>
-
 <table class="table">
     <thead>
         <tr>
@@ -42,9 +27,7 @@
             <th>
                 Preferred contact method.
             </th>
-            <th>
-                Indicator
-            </th>
+
 
         </tr>
     </thead>
@@ -80,13 +63,15 @@
 
 
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => x.BuyIdicator)
 
-
-            </td>
 
         </tr>
         }
     </tbody>
 </table>
+<div class="center jumbotron">
+    <p>
+        <a asp-action="Create" class="btn btn-primary">Add new lead</a>
+    </p>
+
+</div>
