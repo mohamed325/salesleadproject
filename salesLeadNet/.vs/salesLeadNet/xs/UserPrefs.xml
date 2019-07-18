@@ -1,25 +1,18 @@
 ﻿<Properties StartupConfiguration="{64DCAB18-B941-4D58-8EA3-FAEED3219AB0}|Default">
   <MonoDevelop.Ide.ItemProperties.salesLeadNet PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Leads/Index.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/LeadsController.cs">
     <Files>
-      <File FileName="Views/Shared/_Layout.cshtml" Line="51" Column="40" />
-      <File FileName="Views/Leads/Index.cshtml" Line="68" Column="13" />
-      <File FileName="Controllers/LeadsController.cs" Line="45" Column="37" />
-      <File FileName="Views/Leads/Create.cshtml" Line="42" Column="1" />
-      <File FileName="Services/LeadService.cs" Line="38" Column="37" />
+      <File FileName="api/LeadsController.cs" Line="51" Column="19" />
+      <File FileName="Controllers/LeadsController.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="salesLeadNet" expanded="True">
             <Node name="salesLeadNet" expanded="True">
-              <Node name="Controllers" expanded="True" />
-              <Node name="Services" expanded="True" />
-              <Node name="Views" expanded="True">
-                <Node name="Leads" expanded="True">
-                  <Node name="Index.cshtml" selected="True" />
-                </Node>
-                <Node name="Shared" expanded="True" />
+              <Node name="api" expanded="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="LeadsController.cs" selected="True" />
               </Node>
             </Node>
           </Node>
