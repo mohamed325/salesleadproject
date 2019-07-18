@@ -12,10 +12,10 @@ namespace salesLeadNet.api
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class LeadsController : Controller
+    public class ApiController : Controller
     {
         private readonly ILeadService _salesLeadService;
-        public LeadsController(ILeadService salesLeadService)
+        public ApiController(ILeadService salesLeadService)
         {
             _salesLeadService = salesLeadService;
         }

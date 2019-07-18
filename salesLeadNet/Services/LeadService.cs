@@ -67,7 +67,7 @@ namespace salesLeadNet.Services
             {
                 newLead.BuyIdicator += livesOhio;
             }
-            if (newLead.State == State.Other || newLead.State == State.AL || newLead.State == State.HI)
+            if ( newLead.State == State.AL || newLead.State == State.HI)
             {
                 newLead.BuyIdicator = ineligible;
             }
