@@ -1,18 +1,14 @@
 ﻿<Properties StartupConfiguration="{64DCAB18-B941-4D58-8EA3-FAEED3219AB0}|Default">
   <MonoDevelop.Ide.ItemProperties.salesLeadNet PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Models/Lead.cs">
-    <Files>
-      <File FileName="Models/Lead.cs" Line="42" Column="1" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="salesLeadNet" expanded="True">
             <Node name="salesLeadNet" expanded="True">
-              <Node name="api" expanded="True" />
               <Node name="Controllers" expanded="True" />
-              <Node name="Models" expanded="True">
-                <Node name="Lead.cs" selected="True" />
+              <Node name="Services" expanded="True">
+                <Node name="LeadService.cs" selected="True" />
               </Node>
             </Node>
           </Node>

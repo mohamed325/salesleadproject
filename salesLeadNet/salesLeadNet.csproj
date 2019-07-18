@@ -21,4 +21,7 @@
     <Folder Include="Data\" />
     <Folder Include="api\" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Data\20190718025313_firstMigration.Designer.cs" />
+  </ItemGroup>
 </Project>

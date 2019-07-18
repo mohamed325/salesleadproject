@@ -19,25 +19,35 @@ namespace salesLeadNet.Services
         }
         Task<Lead[]> ILeadService.GetSalesLeadsAsync()
         {
-            var leads = _context.Leads;
-            return leads.OrderByDescending(x => x.BuyIdicator).ToArrayAsync();
+
+            var leads = _context.Leads.OrderByDescending(x => x.BuyIdicator);
+
+            var leadsOhioTop = leads.OrderByDescending(x => x.State.ToString().Equals("OH"));
+
+            return leadsOhioTop.Where(x => x.BuyIdicator > 0).ToArrayAsync();
+
         }
         public async Task<bool> AddLeadAsync(Lead newLead)
         {
+
            Lead salesLead = AddBuyingIndicator(newLead);
-           salesLead.Id = Guid.NewGuid();
-            _context.Leads.Add(salesLead);
-            var saveResult = await _context.SaveChangesAsync();
+
+                salesLead.Id = Guid.NewGuid();
+
+
+                _context.Leads.Add(salesLead);
+
+                var saveResult = await _context.SaveChangesAsync();
+            
             return saveResult == 1;
         }
        private Lead AddBuyingIndicator(Lead newLead)
         {
-            int highlyLikely = 5;
-            int byPhone = 4;
-            int byEmailOrSms = 3;
-            int byCarrierPigeon = 2;
-            int livesOhio = 1;
             int ineligible = 0;
+            int byCarrierPigeon = 1;
+            int byEmailOrSms = 2;
+            int byPhone = 3;
+            int highlyLikely = 4;
 
             if (newLead.Zip.StartsWith('7'))
             {
@@ -51,23 +61,17 @@ namespace salesLeadNet.Services
             {
                 newLead.BuyIdicator += byPhone;
             }
-            if (newLead.ContactMethod == ContactMethod.Email)
+            if (newLead.ContactMethod == ContactMethod.Email || newLead.ContactMethod == ContactMethod.Sms)
             {
                 newLead.BuyIdicator += byEmailOrSms;
             }
-            if (newLead.ContactMethod == ContactMethod.Sms)
-            {
-                newLead.BuyIdicator += byEmailOrSms;
-            }
+           
             if (newLead.ContactMethod == ContactMethod.CarrierPigeon)
             {
                 newLead.BuyIdicator += byCarrierPigeon;
             }
-            if (newLead.State == State.OH)
-            {
-                newLead.BuyIdicator += livesOhio;
-            }
-            if ( newLead.State == State.AL || newLead.State == State.HI)
+
+            if (newLead.State == State.AL || newLead.State == State.HI)
             {
                 newLead.BuyIdicator = ineligible;
             }

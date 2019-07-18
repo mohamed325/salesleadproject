@@ -9,8 +9,8 @@ using salesLeadNet.Data;
 namespace salesLeadNet.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20190714191304_Leads")]
-    partial class Leads
+    [Migration("20190718025854_firstMigration")]
+    partial class firstMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
