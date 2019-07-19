@@ -9,27 +9,35 @@ I used multi-tier approach to split the application into two layers: presentatio
 - I used ASP.NET Core, C#, web application server and the MVC pattern
 - I stored leads into a database using SQLite database engine.
 - I used an object-relational mapper called Entity Framework Core for data access
-_  I created a Web page with two views that the user will interact with via the browser (Display leads and add new lead)
-_ I used A REST Api controller that exposes api endpoints so that the HTTP services for getting and posting leads can be accessed from any client application including browsers and mobile devices
+- I created a Web page with two views that the user will interact with via the browser (Display leads and add new lead)
+- I used A REST Api controller that exposes api endpoints so that the HTTP services for getting and posting leads can be accessed from any client application including browsers and mobile devices
 
 
 ### Getting started
 Clone repo and go into the project directory.
 
 ### Prerequisites
-You will need to Install the .NET Core 2.2 SDK. to run the site
+You will need to Install the .NET Core 2.2 SDK to run the site
+
+https://dotnet.microsoft.com/download/dotnet-core/2.2
 
 
 ## Running the app
 
-You can use dotnet CLI tools: navigate to the salesleadNet folder and use dotnet CLI commands.
+You can use dotnet CLI tools: 
+
+navigate to the salesleadNet folder and use dotnet CLI commands.
 ```
 cd salesLeadNet
 dotnet run
 ```
-If you are using Visual Studio or Visual Studio for Mac: Open the project by selecting File > Open > Project/Solution from the menu bar, navigate to the salesleadNet project folder, and select the project file (.csproj or .fsproj).
+If you are using Visual Studio or Visual Studio for Mac: 
 
-If you are using Visual Studio Code: Open the project by selecting File > Open Folder from the menu bar and selecting the salesLeadNet project folder.
+Open the project by selecting File then Open the Project/Solution from the menu bar. navigate to the salesleadNet project folder, and select the project file (.csproj or .fsproj).
+
+If you are using Visual Studio Code: 
+
+Open the project by selecting File, then Open Folder from the menu bar and selecting the salesLeadNet project folder.
 
 ## Navigating the site 
 
@@ -43,6 +51,7 @@ If you are cosuming the api from different client application use http://0.0.0.0
 ## CODE FILES  
 
 SERVICE layer
+
 The service directory contains two files: IleadService and Leadservice which are the C# Interface and Class that contains the business logic and the database code
 
 MODELS
@@ -52,12 +61,13 @@ that represents the lead entity in the database, and the model that will be comb
 
 
 CONTROLlERS
+
 two seperate controllers used: an api controller that exposes api endpoints for wide range client applications and MVC controller that handles incoming requests within the application and serves the view
 
 VIEW
 
 The view uses Razor templating language, which combines HTML and C# code.
-they are two views: one for creating the form for entering new leads details and one for displaying a table contains list of leads
+they are two views: one for creating the form to create new leads and one for displaying a list of leads
 
 
 
