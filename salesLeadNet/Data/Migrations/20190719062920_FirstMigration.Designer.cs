@@ -9,8 +9,8 @@ using salesLeadNet.Data;
 namespace salesLeadNet.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20190718025854_firstMigration")]
-    partial class firstMigration
+    [Migration("20190719062920_FirstMigration")]
+    partial class FirstMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -194,7 +194,7 @@ namespace salesLeadNet.Data.Migrations
                     b.Property<string>("Phone")
                         .IsRequired();
 
-                    b.Property<int?>("State");
+                    b.Property<string>("State");
 
                     b.Property<string>("Zip")
                         .IsRequired();

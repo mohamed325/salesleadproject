@@ -14,6 +14,8 @@
 /Users/abdikarimmohamed/MainProjects/salesLeadNet/salesLeadNet/obj/Debug/netcoreapp2.2/salesLeadNet.TagHelpers.input.cache
 /Users/abdikarimmohamed/MainProjects/salesLeadNet/salesLeadNet/obj/Debug/netcoreapp2.2/salesLeadNet.TagHelpers.output.cache
 /Users/abdikarimmohamed/MainProjects/salesLeadNet/salesLeadNet/obj/Debug/netcoreapp2.2/salesLeadNet.RazorCoreGenerate.cache
+/Users/abdikarimmohamed/MainProjects/salesLeadNet/salesLeadNet/obj/Debug/netcoreapp2.2/Razor/Views/Leads/Create.g.cshtml.cs
+/Users/abdikarimmohamed/MainProjects/salesLeadNet/salesLeadNet/obj/Debug/netcoreapp2.2/Razor/Views/Leads/Index.g.cshtml.cs
 /Users/abdikarimmohamed/MainProjects/salesLeadNet/salesLeadNet/obj/Debug/netcoreapp2.2/Razor/Views/Shared/Error.g.cshtml.cs
 /Users/abdikarimmohamed/MainProjects/salesLeadNet/salesLeadNet/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_CookieConsentPartial.g.cshtml.cs
 /Users/abdikarimmohamed/MainProjects/salesLeadNet/salesLeadNet/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_Layout.g.cshtml.cs
@@ -26,5 +28,3 @@
 /Users/abdikarimmohamed/MainProjects/salesLeadNet/salesLeadNet/obj/Debug/netcoreapp2.2/salesLeadNet.dll
 /Users/abdikarimmohamed/MainProjects/salesLeadNet/salesLeadNet/obj/Debug/netcoreapp2.2/salesLeadNet.pdb
 /Users/abdikarimmohamed/MainProjects/salesLeadNet/salesLeadNet/obj/Debug/netcoreapp2.2/salesLeadNet.csproj.CopyComplete
-/Users/abdikarimmohamed/MainProjects/salesLeadNet/salesLeadNet/obj/Debug/netcoreapp2.2/Razor/Views/Leads/Index.g.cshtml.cs
-/Users/abdikarimmohamed/MainProjects/salesLeadNet/salesLeadNet/obj/Debug/netcoreapp2.2/Razor/Views/Leads/Create.g.cshtml.cs

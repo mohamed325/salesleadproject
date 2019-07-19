@@ -6,7 +6,6 @@
         <State name="__root__">
           <Node name="salesLeadNet" expanded="True">
             <Node name="salesLeadNet" expanded="True">
-              <Node name="Controllers" expanded="True" />
               <Node name="Services" expanded="True">
                 <Node name="LeadService.cs" selected="True" />
               </Node>

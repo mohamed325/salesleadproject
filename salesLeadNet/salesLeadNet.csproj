@@ -20,6 +20,7 @@
     <Folder Include="Services\" />
     <Folder Include="Data\" />
     <Folder Include="api\" />
+    <Folder Include="Data\Migrations\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Data\20190718025313_firstMigration.Designer.cs" />

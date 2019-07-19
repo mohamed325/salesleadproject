@@ -192,7 +192,7 @@ namespace salesLeadNet.Data.Migrations
                     b.Property<string>("Phone")
                         .IsRequired();
 
-                    b.Property<int?>("State");
+                    b.Property<string>("State");
 
                     b.Property<string>("Zip")
                         .IsRequired();

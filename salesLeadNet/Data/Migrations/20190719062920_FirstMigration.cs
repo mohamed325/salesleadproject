@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace salesLeadNet.Data.Migrations
 {
-    public partial class firstMigration : Migration
+    public partial class FirstMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -53,7 +53,7 @@ namespace salesLeadNet.Data.Migrations
                     Id = table.Column<Guid>(nullable: false),
                     Name = table.Column<string>(maxLength: 100, nullable: false),
                     Phone = table.Column<string>(nullable: false),
-                    State = table.Column<int>(nullable: true),
+                    State = table.Column<string>(nullable: true),
                     City = table.Column<string>(maxLength: 25, nullable: true),
                     Zip = table.Column<string>(nullable: false),
                     ContactMethod = table.Column<int>(nullable: true),
